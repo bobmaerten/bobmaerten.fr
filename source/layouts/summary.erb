@@ -1,0 +1,19 @@
+<% wrap_layout :layout do %>
+<h1 class="content-subhead"><%= current_page.destination_path.gsub(/\/index\.html/, '') %></h1>
+
+  <section class="post">
+    <header class="post-header">
+      <h2 class="post-title">Index des pages</h2>
+
+      <p class="post-meta">
+      </p>
+    </header>
+
+    <div class="post-description">
+      <p>
+        <%= yield %>
+      </p>
+    </div>
+  </section>
+
+<% end %>

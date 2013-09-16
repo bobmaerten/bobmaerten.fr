@@ -1,0 +1,227 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(101, 123, 131);
+}
+a:hover,
+a:focus {
+    color: #cb4b16;
+    text-decoration: underline;
+}
+
+code {
+    background: rgb(7, 54, 66);
+    color: rgb(255, 255, 255);
+}
+
+/* LAYOUT CSS */
+#layout {
+    padding-left: 25%; /* "left col (nav + list)" width */
+    position: relative;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 25%;
+    margin-left: -25%;
+    background: rgb(7, 54, 66);
+    color: #fff;
+}
+
+.header {
+    margin: 20% 2em 0;
+    text-align: right;
+}
+
+.brand-title,
+.brand-tagline {
+    margin: 0;
+    font-family: "Ubuntu Condensed", sans-serif;
+}
+.brand-title {
+    text-transform: uppercase;
+}
+.brand-tagline {
+    font-weight: 300;
+    color: rgb(101, 123, 131);
+}
+
+.nav-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.nav-item {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+}
+.nav-item a {
+    background: transparent;
+    border: 3px solid rgb(103, 103, 180);
+    color: #fff;
+    margin-top: 1em;
+    font-family: "Ubuntu Condensed", sans-serif;
+}
+.nav-item a:hover,
+.nav-item a:focus {
+    border: 3px solid rgb(142, 142, 214);
+    color: rgb(142, 142, 214);
+    text-decoration: none;
+}
+
+.content-subhead {
+    text-transform: uppercase;
+    color: #aaa;
+    border-bottom: 1px solid #eee;
+    padding: 0.4em 0;
+    font-size: 80%;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+}
+
+.content {
+    padding: 2em 3em 0;
+}
+
+.post {
+    padding-bottom: 2em;
+}
+.post-title {
+    font-size: 2em;
+    font-family: Ubuntu, sans-serif;
+    color: #222;
+    margin-bottom: 0.2em;
+}
+.post-title {
+    color: #073642;
+}
+.post-title a:hover {
+    text-decoration: none;
+}
+.post-avatar {
+    border-radius: 50px;
+    float: right;
+    margin-left: 1em;
+}
+.post-description {
+    font-family: "PT Serif", Georgia, serif;
+    font-size: 1.1em;
+    color: #444;
+    line-height: 1.8em;
+}
+.post-meta {
+    color: #999;
+    font-size: 90%;
+    margin: 0;
+}
+
+.post-category {
+    margin: 0 0.1em;
+    padding: 0.3em 1em;
+    color: #fff;
+    background: #999;
+    font-size: 80%;
+}
+a.post-category:hover {
+    color: #fff;
+}
+    .post-category-links {
+        background: #5aba59;
+    }
+    .post-category-life {
+        background: #4d85d1;
+    }
+    .post-category-vim {
+        background: #8156a7;
+    }
+    .post-category-ruby {
+        background: #df2d4f;
+    }
+
+    .post-category-debian { background: rgb(223, 4, 81); }
+    .post-category-ubuntu { background: rgb(221, 72, 20); }
+    .post-category-ruby   { background: rgb(198, 26, 26); }
+    .post-category-links  { background: rgb(71, 167, 17); }
+    .post-category-blog   { background: rgb(0, 85, 128); }
+    .post-category-life   { background: rgb(127, 0, 127); }
+    .post-category-patisserie { background: #00979C; }
+
+
+
+.post-images {
+    margin: 1em 0;
+}
+.post-image-meta {
+    margin-top: -3.5em;
+    margin-left: 1em;
+    color: #fff;
+    text-shadow: 0 1px 1px #333;
+}
+
+.footer {
+    text-align: center;
+    padding: 1em 0;
+}
+.footer a {
+    color: #ccc;
+    font-size: 80%;
+}
+.footer .pure-menu a:hover,
+.footer .pure-menu a:focus {
+    background: none;
+}
+
+@media (max-width: 767px) {
+    .sidebar {
+        width: 100%;
+        position: relative;
+        margin: 0;
+    }
+
+    #avatar {
+        display: none;
+    }
+
+    .header {
+        text-align: center;
+        top: auto;
+        margin: 3em auto;
+        position: static;
+    }
+
+    #layout {
+        padding: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .content {
+        padding: 2em 1em 0;
+    }
+
+    #avatar {
+        display: none;
+    }
+    .brand-title {
+        font-size: 120%;
+    }
+    .brand-tagline {
+        font-size: 80%;
+    }
+    .nav-list {
+        font-size: 70%;
+    }
+    .sidebar .header {
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+}

@@ -1,0 +1,18 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+Your title: Bob Maerten.
+Site: bob|point|maerten|at|gmail|point|com
+Twitter: @bobmaerten.
+Location: Valenciennes, France.
+
+# THANKS
+
+    http://middlemanapp.com
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    Javascript, Modernizr
+    Middleman
