@@ -5,7 +5,6 @@ pageable: true
   <h1 class="content-subhead">Derniers billets</h1>
 
 <% if paginate %>
-  <p>Page <%= page_number %> sur <%= num_pages %></p>
   <% if prev_page %>
     <p><%= link_to 'Page précedente', prev_page %></p>
   <% end %>
@@ -33,6 +32,7 @@ pageable: true
 <% end %>
 
 <% if paginate %>
+<p>Page <%= page_number %> sur <%= num_pages %></p>
   <% if next_page %>
     <p><%= link_to 'Page suivante', next_page %></p>
   <% end %>
