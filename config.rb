@@ -42,6 +42,7 @@ activate :deploy do |deploy|
 end
 
 page "blog/*", :layout => :post
+page "blog/index.html", :proxy => '/index.html'
 page "patisserie/*", :layout => :article
 page "/atom.xml", :layout => false
 page "/sitemap.xml", :layout => false
