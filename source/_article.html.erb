@@ -1,0 +1,28 @@
+<section class="post">
+  <header class="post-header">
+    <h2 class="post-title">
+      <% if digest %>
+      <%= link_to article.title, article %>
+      <% else %>
+      <%= article.title %>
+      <% end %>
+    </h2>
+
+    <p class="post-meta">
+      <span><%= article.date.strftime('%d/%m/%Y') %></span>
+      <% article.tags.each do |tag| %>
+        <%= link_to tag, tag_path(tag), {class: "post-category post-category-#{tag}" } %>
+      <% end %>
+    </p>
+  </header>
+
+  <div class="post-description">
+    <p>
+      <% if digest %>
+      <%= article.summary %>
+      <% else %>
+      <%= article.body %>
+      <% end %>
+    </p>
+  </div>
+</section>

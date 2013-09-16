@@ -1,17 +1,9 @@
 ---
 layout: layout
-<!-- pageable: true -->
-<!-- per_page: 12 -->
+pageable: true
+per_page: 25
 ---
 <h1 class="content-subhead">Billets dans la catégorie '<%= tagname %>'</h1>
-
-<% if paginate %>
-  <p>Page <%= page_number %> of <%= num_pages %></p>
-
-  <% if prev_page %>
-    <p><%= link_to 'Previous page', prev_page %></p>
-  <% end %>
-<% end %>
 
 <ul>
   <% page_articles.each_with_index do |article, i| %>
@@ -19,11 +11,14 @@ layout: layout
   <% end %>
 </ul>
 
-<% if paginate %>
-  <% if next_page %>
-    <p><%= link_to 'Next page', next_page %></p>
-  <% end %>
-<% end %>
+<%= partial 'pagination', :locals => {
+  :paginate => paginate,
+  :next_page => next_page,
+  :prev_page => prev_page,
+  :num_pages => num_pages,
+  :page_number => page_number
+} %>
+
 
 <h2 class="content-subhead">Autres catégories</h2>
 <p class="post-meta">

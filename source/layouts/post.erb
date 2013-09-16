@@ -1,28 +1,5 @@
 <% wrap_layout :layout do %>
-<h1 class="content-subhead"><%= current_article.date.strftime('%d/%m/%Y') %></h1>
-
-  <section class="post">
-    <header class="post-header">
-      <h2 class="post-title"><%= current_page.title %></h2>
-
-      <p class="post-meta">
-        <% current_article.tags.each do |tag| %>
-          <%= link_to tag, tag_path(tag), {class: "post-category post-category-#{tag}" } %></a>
-        <% end %>
-      </p>
-    </header>
-
-    <div class="post-description">
-      <p>
-        <%= current_article.body %>
-      </p>
-    </div>
-  </section>
-
-  <section>
-    <h2 class="content-subhead">Commentaires</h2>
-      <div id="juvia_thread" aria-live="polite"><noscript>Please enable JavaScript to view the comments powered by Juvia.</noscript>
-    </div>
-  </section>
-
+  <%= partial 'article', :locals => {:article => current_article, :digest => false} %>
+  <%= partial 'juvia_thread' %>
 <% end %>
+

@@ -1,6 +1,7 @@
 ---
 layout: layout
 pageable: true
+per_page: 25
 ---
 <h1>Archives pour
   <% case page_type
@@ -12,23 +13,18 @@ pageable: true
     <%= year %>
   <% end %>
 </h1>
-
-<% if paginate %>
-  <p>Page <%= page_number %> of <%= num_pages %></p>
-
-  <% if prev_page %>
-    <p><%= link_to 'Page précédente', prev_page %></p>
-  <% end %>
-<% end %>
-
 <ul>
   <% page_articles.each_with_index do |article, i| %>
     <li><span><%= article.date.strftime('%d/%m/%Y') %></span> - <%= link_to article.title, article %></li>
   <% end %>
 </ul>
 
-<% if paginate %>
-  <% if next_page %>
-    <p><%= link_to 'Page suivante', next_page %></p>
-  <% end %>
-<% end %>
+<%= partial 'pagination', :locals => {
+  :paginate => paginate,
+  :next_page => next_page,
+  :prev_page => prev_page,
+  :num_pages => num_pages,
+  :page_number => page_number
+} %>
+
+<ul>
