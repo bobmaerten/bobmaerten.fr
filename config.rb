@@ -82,12 +82,13 @@ page "/sitemap.xml", :layout => false
 #   @which_fake_page = "Rendering a fake page with a variable"
 # end
 
+
 ###
 # Helpers
 ###
 
 # Automatic image dimensions on image_tag helper
-# activate :automatic_image_sizes
+activate :automatic_image_sizes
 
 # Methods defined in the helpers block are available in templates
 # helpers do
@@ -95,6 +96,12 @@ page "/sitemap.xml", :layout => false
 #     "Helping"
 #   end
 # end
+
+helpers do
+  def local_image(path, options = {})
+    image_tag "#{current_page.url}#{path}", options
+  end
+end
 
 set :css_dir, 'css'
 
