@@ -18,3 +18,6 @@ gem 'middleman-deploy', '~> 0.1.2'
 
 # Favicon maker
 gem "middleman-favicon-maker", "~> 3.2"
+
+# Syntax highlight
+gem 'middleman-syntax', '~> 1.2.1'
