@@ -97,12 +97,6 @@ activate :automatic_image_sizes
 #   end
 # end
 
-helpers do
-  def local_image(path, options = {})
-    image_tag "#{current_page.url}#{path}", options
-  end
-end
-
 set :css_dir, 'css'
 
 set :js_dir, 'js'
