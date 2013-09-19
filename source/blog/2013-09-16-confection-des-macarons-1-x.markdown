@@ -42,7 +42,7 @@ Bien plus rigide, droite et au fond plus pratique que la lèche-frite du four, e
 ## un robot patissier
 Même s'il n'est pas indispensable, le fait d'avoir les mains libres est tout de même bien pratique, sans parler de certains cas ou il faut battre une préparation longtemps (meringue italienne ou génoise).
 
-J'arrête là pour le moment sinon je vais en faire des tartines et y passer la nuit. La prochaine fois, on parlera des ingrédients.
+J'arrête là pour le moment sinon je vais en faire des tartines et y passer la nuit. La prochaine fois, on parlera [des ingrédients](/blog/2013/confection-des-macarons-les-ingredients).
 
 ### Notes
 <a name="poches_jetables"></a>
