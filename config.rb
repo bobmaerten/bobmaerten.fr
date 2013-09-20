@@ -82,16 +82,16 @@ page "/sitemap.xml", :layout => false
 #   @which_fake_page = "Rendering a fake page with a variable"
 # end
 
+# Automatic image dimensions on image_tag helper
+# activate :automatic_image_sizes
+
+# Code syntax
+activate :syntax
+
 
 ###
 # Helpers
 ###
-
-# Automatic image dimensions on image_tag helper
-activate :automatic_image_sizes
-
-# Code syntax
-activate :syntax
 
 # Methods defined in the helpers block are available in templates
 # helpers do
@@ -109,6 +109,7 @@ set :images_dir, 'img'
 # Build-specific configuration
 configure :build do
   activate :favicon_maker
+  activate :asset_host, host: 'http://bobmaerten.fr/'
   # For example, change the Compass output style for deployment
   # activate :minify_css
 
