@@ -15,7 +15,7 @@ pageable: true
                :num_pages => num_pages,
                :page_number => page_number }
 
-  %h3.content-subhead Tags
-  %p.post-meta
-    - blog.tags.each do |tag, articles|
-      = link_to tag, tag_path(tag),  {class: "post-category post-category-#{tag}" }
+%h3.content-subhead Tags
+%p.post-meta
+  - blog.tags.each do |tag, articles|
+    = link_to tag, tag_path(tag),  {class: "post-category post-category-#{tag}" }
