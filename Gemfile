@@ -13,7 +13,7 @@ gem "redcarpet", "~> 3.0.0"
 # Needed for summaries
 gem 'nokogiri', '~> 1.6.0'
 
-gem 'haml'
+gem 'slim'
 
 # Deployment
 gem 'middleman-deploy', '~> 0.1.2'

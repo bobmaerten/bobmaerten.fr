@@ -1,0 +1,53 @@
+doctype html
+html
+  head
+    meta charset="utf-8"
+    meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"
+    meta name='viewport' content='width=device-width, initial-scale=1.0'
+    meta name="description" content=""
+    meta name="author" content=""
+    title = current_page.data.title || 'Blob' + '| Bob Maerten'
+    link href="/atom.xml" rel="alternate" title="Bob Maerten" type="application/atom+xml"
+    link rel="author" href="/humans.txt"
+    == stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu+Condensed|Ubuntu:700|Droid+Serif:400,400italic,700,700italic'
+    == stylesheet_link_tag 'http://yui.yahooapis.com/pure/0.3.0/pure-min.css'
+    == stylesheet_link_tag 'pure'
+    == stylesheet_link_tag 'pagination'
+    == stylesheet_link_tag 'syntax'
+  body
+    #layout.pure-g-r
+      .sidebar.pure-u
+        header.header
+          hgroup
+            #avatar = link_to image_tag('/img/avatar.png', {width:"184", height:"189", title:"Blog de Bob Maerten"}), '/'
+            h1.brand-title Bob Maerten
+            h2.brand-tagline Humeurs, interrogations, pâtisseries, développement web, systèmes Linux et autres curiosités.
+
+          nav.nav
+            ul.nav-list
+              li.nav-item= link_to 'A propos', '/about', {class: 'pure-button'}
+              li.nav-item= link_to 'Archives', '/archive', {class: 'pure-button'}
+
+      .pure-u-1
+        .content
+          / A wrapper for all the blog posts
+          == yield
+
+          footer.footer
+            .pure-menu.pure-menu-horizontal.pure-menu-open
+              ul
+                li= link_to 'Twitter', 'http://twitter.com/bobmaerten'
+                li= link_to 'Google+', 'https://plus.google.com/115563477684195197330/posts/p/pub'
+    == javascript_include_tag 'http://yui.yahooapis.com/3.12.0/build/yui/yui-min.js'
+    javascript:
+      YUI().use('node-base', 'node-event-delegate', function (Y) {
+        // This just makes sure that the href="#" attached to the <a> elements
+        // don't scroll you back up the page.
+        Y.one('body').delegate('click', function (e) {
+          e.preventDefault();
+        }, 'a[href="#"]');
+      });
+
+    - if current_path.match(/blog/)
+      = partial "juvia_comments"
+

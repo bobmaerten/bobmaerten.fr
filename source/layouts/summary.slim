@@ -1,0 +1,9 @@
+- wrap_layout :layout do
+  h1.content-subhead= current_page.destination_path.gsub(/\/index\.html/, '')
+
+  section.post
+    header.post-header
+      h2.post-title Index des pages
+      p.post-meta
+    .post-description
+      p == yield
