@@ -16,3 +16,5 @@ Location: Valenciennes, France.
     HTML5, CSS3
     Javascript, Modernizr
     Middleman
+    Git
+    GitHub Pages
