@@ -31,11 +31,11 @@ end
 activate :directory_indexes
 
 activate :deploy do |deploy|
-  deploy.method = :rsync
-  deploy.host   = "arrakis"
-  deploy.path   = "/home/deploy/bobmaerten.fr"
+  deploy.method = :git
+  # deploy.host   = "arrakis"
+  # deploy.path   = "/home/deploy/bobmaerten.fr"
   # Optional Settings
-  deploy.user  = "deploy" # no default
+  # deploy.user  = "deploy" # no default
   # deploy.port  = 5309 # ssh port, default: 22
   deploy.build_before = true
   deploy.clean = true # remove orphaned files on remote host, default: false
