@@ -32,6 +32,8 @@ activate :directory_indexes
 
 activate :deploy do |deploy|
   deploy.method = :git
+  deploy.remote   = "origin" # remote name or git url, default: origin
+  deploy.branch   = "master" # default: gh-pages
   # deploy.host   = "arrakis"
   # deploy.path   = "/home/deploy/bobmaerten.fr"
   # Optional Settings
@@ -109,7 +111,7 @@ set :images_dir, 'img'
 # Build-specific configuration
 configure :build do
   activate :favicon_maker
-  activate :asset_host, host: 'http://bobmaerten.fr/'
+  # activate :asset_host, host: 'http://bobmaerten.fr/'
   # For example, change the Compass output style for deployment
   # activate :minify_css
 

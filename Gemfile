@@ -17,7 +17,6 @@ gem 'slim'
 
 # Deployment
 gem 'middleman-deploy', '~> 0.1.2'
-gem 'middleman-gh-pages'
 
 # Favicon maker
 gem "middleman-favicon-maker", "~> 3.5"
