@@ -1,5 +1,5 @@
 ---
-title: Tester Wallabag dans Docker
+title: Tester wallabag dans Docker
 date: 2014-02-14 10:30 CET
 tags: sysadm
 ---
@@ -11,7 +11,7 @@ READMORE
 
 ![Docker image](https://www.docker.io/static/img/homepage-docker-logo.png)
 
-Cela faisait quelques temps que je voulais m'intéresser à [Docker](http://docker.io) et à la construction d'image. Dans le même temps, il y avait un [ticket ouvert](https://github.com/wallabag/wallabag/issues/220) sur le projet [Wallabag](http://wallabag.org) pour disposer d'une image Docker afin de tester la solution. C'était donc l'occasion de s'y mettre et de contribuer à ma manière au projet.
+Cela faisait quelques temps que je voulais m'intéresser à [Docker](http://docker.io) et à la construction d'image. Dans le même temps, il y avait un [ticket ouvert](https://github.com/wallabag/wallabag/issues/220) sur le projet [wallabag](http://wallabag.org) pour disposer d'une image Docker afin de tester la solution. C'était donc l'occasion de s'y mettre et de contribuer à ma manière au projet.
 
 Le principe de docker réside en la superposition de différentes couches systèmes. En fusionnant ces différentes couches (la méthode diffère en fonction du *filesystem* utilisé), on obtient alors un système complet et potentiellement issu de plusieurs sources aggrégées. Cette souplesse, liée à l'isolation du système fournit par LXC (LinuX Containers) permet de profiter de nombreuses choses regroupeés dans [l'index docker](http://index.docker.io), un site communautaire qui permet de partager des images toutes prêtes que l'on peut directement utiliser telles quelles, ou mieux, surcharger pour un autre usage.
 
@@ -70,6 +70,6 @@ Sommes toutes, il s'agit ni plus ni moins que de scripter l'installation telle q
 
 De la on peut démarrer le service (grâce aux directives `CMD` et `EXPOSE`) et profiter d'un environnement wallabag fraichement installé pour tester, ou pour participer à son développement.
 
-![Wallabag image](http://www.wallabag.org/wp-content/uploads/2014/02/logo-typo-horizontal-no-bg-lg.png)
+![wallabag image](http://www.wallabag.org/wp-content/uploads/2014/02/logo-typo-horizontal-no-bg-lg.png)
 
 *Happy hacking!*
