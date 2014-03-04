@@ -153,6 +153,9 @@ a.post-category:hover {
     .post-category-blog   { background: rgb(0, 85, 128); }
     .post-category-life   { background: rgb(127, 0, 127); }
     .post-category-patisserie { background: #00979C; }
+    .post-category-dev { background: #451ae1; }
+    .post-category-sysadm { background: #e1ab1a; }
+    .post-category-linux { background: #61605e; }
 
 
 
