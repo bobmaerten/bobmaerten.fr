@@ -68,10 +68,12 @@ case "$1" in
     stop)
         CONTAINER_ID=$(docker ps -a | grep -v Exit | grep $SERVER_CONTAINER | awk '{print $1}')
         if [[ -n $CONTAINER_ID ]] ; then
-            ID=$(docker stop $CONTAINER_ID)
-            ID=$(docker rm $CONTAINER_ID)
+            SRV=$(docker stop $CONTAINER_ID)
+            SRV=$(docker rm $CONTAINER_ID)
             if [ $? -eq 0 ] ; then
                 echo 'Stopped.'
+                DATA=$(sudo docker ps -a | grep $DATA_CONTAINER |  awk '{print $1}')
+                DATA=$(sudo docker rm $DATA)
             fi
         else
             echo 'Not Running.'
