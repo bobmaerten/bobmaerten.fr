@@ -3,6 +3,8 @@ title: Instance postgresql à la demande avec Docker
 date: 2014-03-04 14:38 CET
 tags: sysadm, dev, linux
 ---
+MàJ du 14/03/2014 : Quelques modifications sur le fichier source. Je devrais ptet trouver un moyen d'insérer un [gist](https://gist.github.com/bobmaerten/9329752) dans le blog.
+
 Mais qu'est-ce que je l'apprécie ce docker ! De plus en plus, il s'immisce dans mes usages, d'autant plus qu'il me permet d'avoir les outils dont j'ai besoin facilement, rapidement et surtout de manière complètement isolée de mon système qui reste, du coup et en théorie, propre et léger.
 
 Dernièrement j'avais envie de tester une appli rails choppée sur github, configurée par défaut avec postgresql. Or je n'ai pas de serveur sur ma machine, et pas forcément l'envie d'en ajouter un qui "polluerait" encore un peu plus mon système.
@@ -25,10 +27,12 @@ Alors bien sûr, il y a toujours moyen de faire mieux ou d'être plus génériqu
 ```bash
 #!/usr/bin/env bash
 
-PGSQL_DATA_PATH='~/postgresql-data'
+PGSQL_DATA_PATH='/data/pg'
+SERVER_CONTAINER="postgresql-server"
+DATA_CONTAINER="postgresql-data"
 
 function getStatus(){
-    CONTAINER_ID=$(docker ps -a | grep -v Exit | grep postgresql-server | awk '{print $1}')
+    CONTAINER_ID=$(docker ps -a | grep -v Exit | grep $SERVER_CONTAINER | awk '{print $1}')
     if [[ -z $CONTAINER_ID ]] ; then
         echo 'Not running.'
         return 1
@@ -44,15 +48,15 @@ case "$1" in
             mkdir -p $PGSQL_DATA_PATH
         fi
 
-        docker ps -a | grep -q postgresql-data
+        docker ps -a | grep -q $DATA_CONTAINER
         if [ $? -ne 0 ]; then
-            docker run -name postgresql-data -v $PGSQL_DATA_PATH:/data ubuntu /bin/bash
+            docker run --name $DATA_CONTAINER -v $PGSQL_DATA_PATH:/data ubuntu /bin/bash
         fi
 
-        docker ps -a | grep -v Exit | grep -q postgresql-server
+        docker ps -a | grep -v Exit | grep -q $SERVER_CONTAINER
         if [ $? -ne 0 ]; then
-            CONTAINER_ID=$(docker run -d -p 5432:5432 -volumes-from postgresql-data \
-                -name postgresql-server kamui/postgresql)
+            CONTAINER_ID=$(docker run -d -p 5432:5432 --volumes-from $DATA_CONTAINER \
+                --name $SERVER_CONTAINER kamui/postgresql)
         fi
         getStatus
         ;;
@@ -62,7 +66,7 @@ case "$1" in
         ;;
 
     stop)
-        CONTAINER_ID=$(docker ps -a | grep -v Exit | grep postgresql-server | awk '{print $1}')
+        CONTAINER_ID=$(docker ps -a | grep -v Exit | grep $SERVER_CONTAINER | awk '{print $1}')
         if [[ -n $CONTAINER_ID ]] ; then
             ID=$(docker stop $CONTAINER_ID)
             ID=$(docker rm $CONTAINER_ID)
