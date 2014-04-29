@@ -48,4 +48,6 @@ Cet exemple montre qu'il est possible de factoriser des élements de configurati
         Use LocationOptions "192.168.1.0/24"
     <Location>
 
-On imagine tout de suite tout ce qu'on peut gagner à utiliser des macro. Toutefois, il faut faire avec les restrictions du module, à savoir qu'il n'est pas possible de déclarer des macros avec un nombre de paramètres variables, ni encore de surcharger le nom d'une macro. On se retrouve doncassez vite avec un nombre conséquent de macro pour gérer les différents cas possible. Voir dans le gist suivant l exemple de [la configuraiton de nos *"reverse-proxies"*](https://gist.github.com)
+On imagine tout de suite tout ce qu'on peut gagner à utiliser des macro. Toutefois, il faut faire avec les restrictions du module, à savoir qu'il n'est pas possible de déclarer des macros avec un nombre de paramètres variables, ni encore de surcharger le nom d'une macro. On se retrouve doncassez vite avec un nombre conséquent de macro pour gérer les différents cas possible. Voir dans le gist suivant l exemple de [la configuration de nos *"reverse-proxies"*](https://gist.github.com/bobmaerten/11393514).
+
+Voilà donc comment je configure un nouveau reverse proxy désormais : une ligne à ajouter dans le fichier de configuration par défaut de Apache/httpd et un `service apache2 reload`. Les plus futés auront flairé tout de suite ou je voulais en venir dès le début : un playbook Ansible ! Mais ce sera pour un autre billet. ;-)
