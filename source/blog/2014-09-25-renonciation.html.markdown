@@ -40,3 +40,5 @@ Mais c'est plus fort que moi. Ce n'est pas ma nature, mon profil, mon objectif, 
 Bref, je renonce. La fonction publique a gagné. Elle a absorbé toute la volonté que j'avais de faire des choses bien de ma vie professionnelle. Je continuerai donc à être pas trop mal payé pour des activités aussi insipides qu'inutiles, à souffler et pester contre un système qui ne met plus l'humain dans ses équations, à être infect avec certains de mes collègues que je méprise pour leur incompétence, mais qui au fond ont tout compris depuis fort longtemps. Car c'est moi qui suis dans le délire. Après tout, pourquoi se faire chier à faire des choses sympa alors qu'on peut rester assis sur son cul à attendre l'heure de rentrer chez soi pour [vendre son temps de cerveau à Coca Cola](http://fr.wikipedia.org/wiki/Temps_de_cerveau_humain_disponible) ?
 
 Comme dirait [George Abitbol](http://fr.wikipedia.org/wiki/La_Classe_am%C3%A9ricaine), l'homme le plus classe du monde : « [Monde de merde](https://www.youtube.com/watch?v=XdVjIzTBDdQ) ».
+
+_Edit du 02/10/2014_: merci à [David Larlet](https://larlet.fr) pour les corrections (1er PR du blog, ça mérite d'être signalé).
