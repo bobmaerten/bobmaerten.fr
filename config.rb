@@ -113,10 +113,10 @@ configure :build do
   activate :favicon_maker
   # activate :asset_host, host: 'http://bobmaerten.fr/'
   # For example, change the Compass output style for deployment
-  # activate :minify_css
+  activate :minify_css
 
   # Minify Javascript on build
-  # activate :minify_javascript
+  activate :minify_javascript
 
   # Enable cache buster
   # activate :cache_buster
