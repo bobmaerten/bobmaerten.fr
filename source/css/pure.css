@@ -40,6 +40,10 @@ code {
     text-align: right;
 }
 
+#avatar a img {
+    border-radius: 50%;
+}
+
 .brand-title,
 .brand-tagline {
     margin: 0;
