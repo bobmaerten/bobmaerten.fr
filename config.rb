@@ -110,7 +110,17 @@ set :images_dir, 'img'
 
 # Build-specific configuration
 configure :build do
-  activate :favicon_maker
+  activate :favicon_maker, :icons => {
+    "favicon_base.png" => [
+      { icon: "apple-touch-icon-152x152-precomposed.png" },
+      { icon: "apple-touch-icon-144x144-precomposed.png" },
+      { icon: "apple-touch-icon-114x114-precomposed.png" },
+      { icon: "apple-touch-icon-72x72-precomposed.png" },
+      { icon: "mstile-144x144", format: :png },
+      { icon: "favicon.png", size: "16x16" },
+      { icon: "favicon.ico", size: "64x64,32x32,24x24,16x16" },
+    ]
+  }
   # activate :asset_host, host: 'http://bobmaerten.fr/'
   # For example, change the Compass output style for deployment
   activate :minify_css
