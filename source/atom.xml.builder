@@ -2,9 +2,9 @@ xml.instruct!
 xml.feed "xmlns" => "http://www.w3.org/2005/Atom" do
   xml.title "Bob Maerten"
   xml.subtitle "Humeurs, interrogations, pâtisseries, développement web, systèmes Linux et autres curiosités"
-  xml.id "http://bobmaerten.fr/"
-  xml.link "href" => "http://bobmaerten.fr/"
-  xml.link "href" => "http://bobmaerten.fr/atom.xml", "rel" => "self"
+  xml.id "http://bobmaerten.github.io/"
+  xml.link "href" => "http://bobmaerten.github.io/"
+  xml.link "href" => "http://bobmaerten.github.io/atom.xml", "rel" => "self"
   xml.updated blog.articles.first.date.to_time.iso8601
   xml.author { xml.name "Bob Maerten" }
 
