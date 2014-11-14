@@ -1,4 +1,4 @@
 # robotstxt.org/
 
 User-agent: *
-Sitemap: http://bobmaerten.fr/sitemap.xml
+Sitemap: http://bobmaerten.github.io/sitemap.xml
