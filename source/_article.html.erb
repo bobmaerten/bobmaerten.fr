@@ -20,6 +20,7 @@
     <p>
       <% if digest %>
       <%= article.summary %>
+      <%= link_to 'Lire la suite…', article %>
       <% else %>
       <%= article.body %>
       <% end %>
