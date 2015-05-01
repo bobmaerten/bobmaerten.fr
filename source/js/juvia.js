@@ -1,7 +1,7 @@
 (function() {
     var options = {
         container    : '#juvia_thread',
-        site_key     : 'hhpicpawm9w4li589nmwoe7m8yb9wxt',
+        site_key     : '95emgxaxhg7c2f9d6xwlwu4u9zrmbq9',
         topic_key    : location.pathname,
         topic_url    : location.href,
         topic_title  : document.title || location.href,
@@ -29,7 +29,7 @@
         }
 
         var result =
-            'http://comments.bobmaerten.fr/api/show_topic.js' +
+            'http://comments.bobmaerten.eu/api/show_topic.js' +
             '?_c=' + window._juviaRequestCounter +
             '&' + makeQueryString(options);
         window._juviaRequestCounter++;
