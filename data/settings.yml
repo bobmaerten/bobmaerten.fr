@@ -1,0 +1,15 @@
+site:
+  title: Bob Maerten — Blog Perso
+  author: Bob Maerten
+  description: 'Humeurs, interrogations, pâtisseries, développement web, systèmes Linux et autres curiosités'
+  url: 'http://bobmaerten.github.io'
+  logo: 'http://bobmaerten.github.io/img/avatar2014.jpg'
+social:
+  google_plus: 'https://plus.google.com/+BobMaerten'
+  twitter:
+    url: 'https://twitter.com/bobmaerten'
+    name: '@bobmaerten'
+  github: 'https://github.com/bobmaerten'
+  email: bob.maerten@gmail.com
+  rss:
+    url: /feed.xml
