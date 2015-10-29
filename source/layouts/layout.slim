@@ -7,6 +7,8 @@ html
     meta name="description" content=""
     meta name="author" content=""
 
+    meta http-equiv="refresh" content="0;URL=https://bobmaerten.eu#{current_page.url.gsub(/\/\d{4}/, '').chop}.html"
+
     = partial 'open_graph'
 
     title = current_page.data.title || 'Blog' + ' | Bob Maerten'
